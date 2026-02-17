@@ -1,21 +1,43 @@
-using System;
 using UnityEngine;
+using System;
 
-public class Armor : MonoBehaviour
-{
-    [SerializeField] private int defense;
-    [SerializeField] private int stamina;
+
+
+public class Armor : MonoBehaviour {
+      
+    public class Defenses {
+        [SerializeField]
+        public int defenseRating = 0;
+        [SerializeField]
+        public int fireResistance;
+        [SerializeField]
+        public int waterResistance;
+        [SerializeField]
+        public int lightningResistance; 
+        [SerializeField]
+        public int earthResistance;
+
+    }
+ public class Attributes
+    {
+        [SerializeField] 
+      public int intellect;
+        [SerializeField]
+      public int stamina;
+        [SerializeField]
+      public int agility;
+        [SerializeField]
+      public int strength;
+
+    }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        defense = 10;
-        Debug.Log(defense);
-        Console.WriteLine(defense);
+      
 
-        stamina = 10;
-        Debug.Log(stamina);
-        Console.WriteLine(stamina);
+        
     }
 
     // Update is called once per frame
